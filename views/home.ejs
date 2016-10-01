@@ -1,0 +1,41 @@
+<% include partials/htmlbegin.ejs %>
+
+<div class="jumbotron">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="input-group">
+            <label for="userfile">Select Image to Upload:</label>
+            <input type="file" id="userfile" name="userfile" accept="image/*">
+        </div>
+        <div class="input-group">
+            <input type="checkbox" id="is_public" name="is_public" value="1"> <label for="is_public">Public
+                File?</label>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Upload to Server" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<p>Note: Public files are shown in the listings and private are accessible only by the unique URL.</p>
+<% if (publicFiles.length) { %>
+    <h3>Public Uploads</h3>
+    <div class="row">
+        <% for (let i = 0; i < publicFiles.length; i++) { %>
+            <div class="col-xs-6 col-md-3">
+                <a href="/images/<%= publicFiles[i].filePath %>" class="thumbnail" target="_blank">
+                    <img src="/images/<%= publicFiles[i].filePath %>" alt="" title="<%= publicFiles[i].fileName %>">
+                </a>
+            </div>
+        <% } %>
+    </div>
+<% } %>
+<% if (privateFiles.length) { %>
+    <h3>Private Uploads</h3>
+    <div class="list-group">
+        <% for (let i = 0; i < privateFiles.length; i++) { %>
+            <a href="/download/<%= privateFiles[i].filePath %>" class="list-group-item" title="<%= privateFiles[i].fileName %>"><%= currentUrl %>download/<%= privateFiles[i].filePath %></a>
+        <% } %>
+    </div>
+<% } %>
+
+<% include partials/htmlend.ejs %>

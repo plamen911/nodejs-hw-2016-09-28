@@ -1,0 +1,19 @@
+{
+  "name": "hw-2016-09-28",
+  "version": "1.0.0",
+  "description": "Node.js Modules - Files, Utilities, Streams; Deployment - Homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Plamen Markov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "connect-busboy": "0.0.2",
+    "ejs": "2.5.2",
+    "express": "4.14.0",
+    "jsonfile": "2.4.0",
+    "uid2": "0.0.3"
+  }
+}
