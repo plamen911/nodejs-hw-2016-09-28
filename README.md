@@ -21,3 +21,21 @@ Try to pipe it and provide correct browser headers.
 
 ### Problem 7. Deploy the app to the cloud
 Keep in mind that Heroku file uploads required third party service. If you want, use some, otherwise the uploaded files may get deleted by their servers (which is fine for this exercise).
+
+#### Deployment
+
+`heroku login`
+`heroku create plamen911nodeupload`
+`heroku config:set NODE_ENV=production`
+`git push heroku master`
+`heroku open`
+
+https://plamen911nodeupload.herokuapp.com/ | https://git.heroku.com/plamen911nodeupload.git
+
+#### Resources
+- https://www.sitepoint.com/how-to-create-a-node-js-cluster-for-speeding-up-your-apps/
+- https://github.com/expressjs/node-multiparty
+- https://nodejs.org/dist/latest-v6.x/docs/api/zlib.html#zlib_compressing_http_requests_and_responses
+- https://gtmetrix.com/
+- https://www.heroku.com/
+- http://toolkit.herokuapp.com/

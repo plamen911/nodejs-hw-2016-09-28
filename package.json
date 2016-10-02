@@ -1,6 +1,10 @@
 {
   "name": "hw-2016-09-28",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.2.x",
+    "npm": "3.9.x"
+  },
   "description": "Node.js Modules - Files, Utilities, Streams; Deployment - Homework",
   "main": "app.js",
   "scripts": {
