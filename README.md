@@ -24,11 +24,11 @@ Keep in mind that Heroku file uploads required third party service. If you want,
 
 #### Deployment
 
-`heroku login`
-`heroku create plamen911nodeupload`
-`heroku config:set NODE_ENV=production`
-`git push heroku master`
-`heroku open`
+- `heroku login`
+- `heroku create plamen911nodeupload`
+- `heroku config:set NODE_ENV=production`
+- `git push heroku master`
+- `heroku open`
 
 https://plamen911nodeupload.herokuapp.com/ | https://git.heroku.com/plamen911nodeupload.git
 
